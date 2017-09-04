@@ -1,0 +1,115 @@
+/*!
+ * Start Bootstrap - Shop Homepage (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+html {
+	height: 100%;
+}
+
+body {
+	/* padding-top: 70px; */
+	/* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+	height: 100%;
+}
+
+.slide-image {
+	width: 100%;
+}
+
+.carousel-holder {
+	margin-bottom: 30px;
+}
+
+.carousel-control,.item {
+	border-radius: 4px;
+}
+
+.caption {
+	height: 130px;
+	overflow: hidden;
+}
+
+.caption h4 {
+	white-space: nowrap;
+}
+
+.thumbnail img {
+	width: 100%;
+}
+
+.ratings {
+	padding-right: 10px;
+	padding-left: 10px;
+	color: #d17581;
+}
+
+.thumbnail {
+	padding: 0;
+}
+
+.thumbnail .caption-full {
+	padding: 9px;
+	color: #333;
+}
+
+footer {
+	margin: 0;
+}
+
+.marginTop70PX {
+	margin-top: 70px;
+}
+
+.wrapper {
+	min-height: 100%;
+	position: relative;
+}
+
+.content {
+	padding-bottom: 20px;
+}
+
+.footer {
+	position: absolute;
+	bottom: 15px;
+	height: 60px;
+}
+
+.center {
+	width: 80%;
+	background-color: #F1F8FF;
+	margin: 0 auto;
+}
+.marginLeftRight20PX{
+	margin-left: 20px;
+	margin-right:20px;
+}
+marginLeftRight10PX{
+	margin-left: 10px;
+	margin-right:10px;
+}
+paddingLeftRight20PX{
+	padding-left: 20px;
+	padding-right:20px;
+}
+paddingLeftRight10PX{
+	padding-left: 10px;
+	padding-right:10px;
+}
+.marginTop10PX{
+	margin-top:10px;
+}
+.marginTop20PX{
+	margin-top:20px;
+}
+.marginTop15PX{
+	margin-top:15px;
+}
+.marginTop25PX{
+	margin-top:25px;
+}
+.borderBottom{
+	border-bottom: 1px solid lightgray;
+}
+
