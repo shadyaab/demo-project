@@ -101,16 +101,10 @@ public class ArticleDAOImpl implements ArticleDAO{
 								.getResultList();
 	}
 
-	public List<Article> getScheduleArticle() {
-		Calendar calender = Calendar.getInstance();
-		calender.add(Calendar.DATE, -1);
-		calender.set(Calendar.HOUR_OF_DAY, 22);
-		calender.set(Calendar.MINUTE, 0);
-		calender.set(Calendar.SECOND, 0);
-		
+	public List<Article> getScheduleArticle(Calendar calendar) {
 		Session session = sessionFactory.getCurrentSession();
 		Criteria criteria = session.createCriteria(Article.class);
-		criteria.add(Restrictions.lt("postDate",calender.getTime()));
+		criteria.add(Restrictions.lt("postDate",calendar.getTime()));
 		return criteria.list();
 	}
 

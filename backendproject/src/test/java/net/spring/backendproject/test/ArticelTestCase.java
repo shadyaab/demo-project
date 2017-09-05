@@ -85,12 +85,12 @@ public class ArticelTestCase {
 //		
 //	}
 	
-	@Test
-	public void getScheduleArticle(){
-		
-		assertEquals("Failed to add Article", 2, articleDAO.getScheduleArticle().size());
-		
-	}
+//	@Test
+//	public void getScheduleArticle(){
+//		
+//		assertEquals("Failed to add Article", 2, articleDAO.getScheduleArticle().size());
+//		
+//	}
 	
 //	@Test
 //	public void testCalender(){

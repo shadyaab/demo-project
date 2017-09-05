@@ -1,5 +1,6 @@
 package net.spring.backendproject.business;
 
+import java.util.Calendar;
 import java.util.List;
 
 import net.spring.backendproject.dao.ArticleDAO;
@@ -28,8 +29,14 @@ public class BusinessLogic {
 	}
 	
 	public void sendEmail(){
-		//User user = userDAO.getUserById(1);
-		List<Article> list = articleDAO.getScheduleArticle();
+		//Set Time for scheduling email delivery
+		Calendar calendar = Calendar.getInstance();
+		calendar.add(Calendar.DATE, -1);
+		calendar.set(Calendar.HOUR_OF_DAY, 22);
+		calendar.set(Calendar.MINUTE, 0);
+		calendar.set(Calendar.SECOND, 0);
+		
+		List<Article> list = articleDAO.getScheduleArticle(calendar);
 		
 		for(Article article: list){
 			List<String> emails = emailDAO.getRegisteredEmail(article.getTopic());
@@ -40,7 +47,7 @@ public class BusinessLogic {
 			System.out.println("Article : " + article.getArticle() + "\n");
 			System.out.println("Send To: " + emails);
 			System.out.println("--------------------------------------------------------");
-			System.out.println("\n\n");
+			System.out.println("\n\n"); 
 			
 		}
 	}

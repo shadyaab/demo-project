@@ -1,5 +1,6 @@
 package net.spring.backendproject.dao;
 
+import java.util.Calendar;
 import java.util.List;
 
 import net.spring.backendproject.dto.Article;
@@ -17,5 +18,5 @@ public interface ArticleDAO {
 	 * */
 	List<Article> listActiveArticle(); 
 	List<Article> getLatestActiveArticle(int count);
-	List<Article> getScheduleArticle();
+	List<Article> getScheduleArticle(Calendar calendar);
 }
