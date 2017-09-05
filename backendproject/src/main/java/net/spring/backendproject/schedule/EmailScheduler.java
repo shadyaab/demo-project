@@ -1,7 +1,5 @@
 package net.spring.backendproject.schedule;
 
-import java.util.Date;
-
 import net.spring.backendproject.business.BusinessLogic;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +15,8 @@ public class EmailScheduler {
 //		System.out.println("hello : "  + new Date());
 //	}
 	
-//	@Scheduled(cron="0 */1 * * * *")
-//	public void demoCronSchedule(){
-//		System.out.println("hello : "  + new Date());
-//		logic.hello();
-//	}
+	@Scheduled(cron="0 0 22 * * *")
+	public void demoCronSchedule(){
+		logic.sendEmail();
+	}
 }

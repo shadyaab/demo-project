@@ -1,6 +1,7 @@
 package net.spring.backendproject.daoImpl;
 
 import java.sql.Timestamp;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -34,8 +35,7 @@ public class ArticleDAOImpl implements ArticleDAO{
 		return null;
 	}
 
-	public List<Article> list() {
-		return sessionFactory
+	public List<Article> list() {		return sessionFactory
 				.getCurrentSession()
 					.createQuery("FROM Article", Article.class)
 						.getResultList();
@@ -102,9 +102,15 @@ public class ArticleDAOImpl implements ArticleDAO{
 	}
 
 	public List<Article> getScheduleArticle() {
+		Calendar calender = Calendar.getInstance();
+		calender.add(Calendar.DATE, -1);
+		calender.set(Calendar.HOUR_OF_DAY, 22);
+		calender.set(Calendar.MINUTE, 0);
+		calender.set(Calendar.SECOND, 0);
+		
 		Session session = sessionFactory.getCurrentSession();
 		Criteria criteria = session.createCriteria(Article.class);
-		criteria.add(Restrictions.lt("postDate",new Timestamp((new Date()).getTime())));
+		criteria.add(Restrictions.lt("postDate",calender.getTime()));
 		return criteria.list();
 	}
 

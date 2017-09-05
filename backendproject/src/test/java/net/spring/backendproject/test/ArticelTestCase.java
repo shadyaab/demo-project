@@ -3,6 +3,7 @@ package net.spring.backendproject.test;
 import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import net.spring.backendproject.dao.ArticleDAO;
@@ -87,9 +88,15 @@ public class ArticelTestCase {
 	@Test
 	public void getScheduleArticle(){
 		
-		assertEquals("Failed to add Article", 3, articleDAO.getScheduleArticle().size());
+		assertEquals("Failed to add Article", 2, articleDAO.getScheduleArticle().size());
 		
 	}
+	
+//	@Test
+//	public void testCalender(){
+//		Calendar calender = Calendar.getInstance();
+//		System.out.println(calender);
+//	}
 	
 }
 
